@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/attempts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_main"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:clickable="true"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/lvlState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hangman0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/wordToGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lvlState"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/wonOrLost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/restartGame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/restartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="@string/restart_game"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        app:columnCount="9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+        app:rowCount="3">
+
+        <Button
+            android:id="@+id/a"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/a"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/b"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/b"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/c"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/c"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/d"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/d"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/e"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/e"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/f"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/f"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/g"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/g"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/h"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/h"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/i"
+            android:layout_width="40dp"
+            android:onClick="onLetterClick"
+            android:text="@string/i"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/J"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/j"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/k"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/k"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/l"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/l"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/m"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/m"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/n"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/n"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/o"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/o"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/p"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/p"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/q"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/q"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/r"
+            android:layout_width="40dp"
+            android:onClick="onLetterClick"
+            android:text="@string/r"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/s"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/s"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/t"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/t"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/u"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/u"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/v"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/v"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/w"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/w"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/x"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/x"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/y"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/y"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/z"
+            android:layout_width="40dp"
+            android:layout_marginEnd="3dp"
+            android:onClick="onLetterClick"
+            android:text="@string/z"
+            android:textSize="20sp" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
